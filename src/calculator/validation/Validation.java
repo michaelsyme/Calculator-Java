@@ -23,7 +23,7 @@ public class Validation extends Common {
             if(a.matches(OPERAND_REGEX)) {
                 if(lastArgType == ArgTypes.OPERAND) {
                     // unexpected parameter pattern following previous parameter.
-                    System.out.println("Invalid input pattern. Expecting an operation but detected an operand.");
+                    System.out.println("Invalid input pattern. Detected 2 operands.");
                     return false;
                 }
                 lastArgType = ArgTypes.OPERAND;
@@ -31,7 +31,7 @@ public class Validation extends Common {
             } else if(a.matches(OPERATION_REGEX)) {
                 if(lastArgType == ArgTypes.OPERATION) {
                     // unexpected parameter pattern following previous parameter.
-                    System.out.println("Invalid input pattern. Expecting an operand but detected an operation.");
+                    System.out.println("Invalid input pattern. Detected 2 operations.");
                     return false;
                 }
                 lastArgType = ArgTypes.OPERATION;
