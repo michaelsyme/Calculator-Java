@@ -12,8 +12,7 @@ public class Validation extends Common {
         ArgTypes lastArgType = ArgTypes.NONE;
         
         if(args.length < 3) {
-            System.out.println("How to use: operand operation operand.");
-            System.out.println("A minimum of 3 parameters are expected, seperated by space.");
+            System.out.println("How to use: operand operation operand. A minimum of 3 parameters are expected, seperated by space.");
             return false;
         }
         
@@ -43,8 +42,7 @@ public class Validation extends Common {
                 return false;
             }
         }
-        
-        // scenario where we enter, example 3+3, with no spaces
+
         return true;
     }
 }
